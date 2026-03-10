@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
-import { Download, Linkedin, Github } from "lucide-react";
-import profileImg from "@/assets/profile-avatar.png";
+import { Linkedin, Github } from "lucide-react";
 
 const HeroSection = () => {
   return (
