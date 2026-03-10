@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
-import { Download, Linkedin, Github } from "lucide-react";
-import profileImg from "@/assets/profile-avatar.png";
+import { Linkedin, Github } from "lucide-react";
 
 const HeroSection = () => {
   return (
@@ -45,29 +44,6 @@ const HeroSection = () => {
             </a>
           </div>
 
-          <a
-            href="#contact"
-            className="inline-flex items-center gap-2 rounded-full border-2 border-primary px-6 py-3 text-sm font-medium text-primary transition-all duration-300 hover:bg-primary hover:text-primary-foreground"
-          >
-            <Download size={16} />
-            Download CV
-          </a>
-        </motion.div>
-
-        {/* Circular Avatar */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
-          className="relative flex-shrink-0"
-        >
-          <div className="relative h-60 w-60 overflow-hidden rounded-full border-4 border-primary/30 md:h-72 md:w-72 glow">
-            <img
-              src={profileImg}
-              alt="Ramadevi Sunkara"
-              className="h-full w-full object-cover"
-            />
-          </div>
         </motion.div>
       </div>
     </section>
