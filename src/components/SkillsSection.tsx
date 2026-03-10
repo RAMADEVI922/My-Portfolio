@@ -1,48 +1,39 @@
 import { motion } from "framer-motion";
-import { Code2, FileCode, Braces, Atom, Terminal, GitBranch, Database, Layers } from "lucide-react";
 
 const skills = [
-  { name: "HTML", icon: FileCode },
-  { name: "CSS", icon: Code2 },
-  { name: "JavaScript", icon: Braces },
-  { name: "React.js", icon: Atom },
-  { name: "Python", icon: Terminal },
-  { name: "Git & GitHub", icon: GitBranch },
-  { name: "SQL & DBMS", icon: Database },
-  { name: "OOPs", icon: Layers },
+  "HTML", "CSS", "JavaScript", "React.js", "Python",
+  "Git", "GitHub", "SQL & DBMS", "OOPs",
+  "Web Development", "Problem Solving", "Communication",
 ];
 
 const SkillsSection = () => {
   return (
     <section id="skills" className="py-24">
-      <div className="section-container">
+      <div className="section-container text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6 }}
         >
-          <p className="mb-2 text-sm font-medium tracking-widest uppercase text-primary">Toolkit</p>
-          <h2 className="mb-10 text-3xl font-semibold text-foreground">Skills & Technologies</h2>
+          <h2 className="mb-10 text-3xl font-bold text-foreground">
+            <span className="text-primary">Skills</span>
+          </h2>
         </motion.div>
 
-        <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4">
-          {skills.map((skill, i) => {
-            const Icon = skill.icon;
-            return (
-              <motion.div
-                key={skill.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: i * 0.05 }}
-                className="glass-card flex flex-col items-center gap-3 p-6"
-              >
-                <Icon size={28} className="text-primary" />
-                <span className="text-sm font-medium text-foreground">{skill.name}</span>
-              </motion.div>
-            );
-          })}
+        <div className="flex flex-wrap justify-center gap-3">
+          {skills.map((skill, i) => (
+            <motion.span
+              key={skill}
+              initial={{ opacity: 0, y: 15 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.3, delay: i * 0.04 }}
+              className="rounded-lg border border-primary/40 bg-secondary px-5 py-2.5 text-sm font-medium text-foreground transition-all duration-200 hover:border-primary hover:bg-primary/10 hover:shadow-[0_0_12px_hsl(var(--primary)/0.2)] cursor-default"
+            >
+              {skill}
+            </motion.span>
+          ))}
         </div>
       </div>
     </section>

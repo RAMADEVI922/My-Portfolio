@@ -3,29 +3,25 @@ import { motion } from "framer-motion";
 const AboutSection = () => {
   return (
     <section id="about" className="py-24">
-      <div className="section-container">
+      <div className="section-container text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6 }}
         >
-          <p className="mb-2 text-sm font-medium tracking-widest uppercase text-primary">About Me</p>
-          <h2 className="mb-8 text-3xl font-semibold text-foreground">Professional Summary</h2>
-          <div className="glass-card p-8 md:p-10">
-            <p className="mb-6 text-base leading-relaxed text-muted-foreground">
-              Seeking a challenging position in computer science to leverage my expertise in full-stack development, 
-              problem solving, and innovative software design to build scalable, efficient, and user-focused web 
-              applications that drive organizational success.
+          <h2 className="mb-8 text-3xl font-bold text-foreground">
+            About <span className="text-primary">Me</span>
+          </h2>
+          <div className="max-w-2xl mx-auto space-y-5">
+            <p className="text-sm leading-relaxed text-muted-foreground">
+              Hi, I'm <span className="text-foreground font-semibold">Ramadevi Sunkara</span>, a passionate web developer dedicated to crafting responsive, user-centric digital experiences. Currently pursuing a B.Tech in Computer Science at Avanthi Institute of Engineering and Technology, I have a strong foundation in front-end technologies and an expanding interest in back-end development.
             </p>
-            <p className="mb-6 text-base leading-relaxed text-muted-foreground">
-              Currently pursuing B.Tech in Computer Science and Engineering, I have hands-on experience with 
-              React.js, JavaScript, Python, and modern web technologies. My internships at Infosys and Excelr have 
-              given me practical exposure to building responsive web applications and working with AI/ML techniques.
+            <p className="text-sm leading-relaxed text-muted-foreground">
+              I thrive on solving complex problems, exploring new technologies, and building impactful solutions. Whether it's developing seamless interfaces or contributing to open-source projects, I'm driven by innovation and delivering value.
             </p>
-            <p className="text-base leading-relaxed text-muted-foreground">
-              I'm passionate about creating seamless user experiences, writing clean and maintainable code, 
-              and continuously exploring emerging technologies in web development.
+            <p className="text-sm leading-relaxed text-muted-foreground">
+              I'm actively seeking internship, freelance, and collaborative opportunities where I can learn, grow, and make a meaningful impact.
             </p>
           </div>
         </motion.div>
