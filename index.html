@@ -11,6 +11,17 @@
     <meta property="og:description" content="Full-stack web developer portfolio – React, JavaScript, Python" />
     <meta property="og:type" content="website" />
     <link rel="icon" type="image/svg+xml" href="/graduation-cap.svg" />
+    <script type="text/javascript">
+      (function() {
+        if (window.location.pathname !== '/' && !window.location.pathname.includes('.')) {
+          var redirect = window.location.pathname;
+          if (redirect.startsWith('/my-digital-Portfolio')) {
+            redirect = redirect.replace('/my-digital-Portfolio', '');
+          }
+          window.history.replaceState(null, null, '/my-digital-Portfolio/?redirect=' + encodeURIComponent(redirect));
+        }
+      })();
+    </script>
   </head>
 
   <body>
