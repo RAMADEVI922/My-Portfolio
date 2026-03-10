@@ -3,7 +3,7 @@ import { Award } from "lucide-react";
 
 const certifications = [
   { title: "Generative AI", issuer: "Infosys" },
-  { title: "Web Development / Java", issuer: "Excelr" },
+  { title: "Web Development / JavaScript", issuer: "Excelr" },
   { title: "AI & ML Virtual Internship", issuer: "EduSkills" },
   { title: "Python Programming", issuer: "VaultofCodes" },
 ];
